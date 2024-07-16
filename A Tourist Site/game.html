@@ -35,9 +35,7 @@
 			<div id="ssun"></div>
 			<br>
 				<div class="wrapper">
-				<p><font size= "7">16Team Card Game</font><p>
-				<br>
-				<p><font size="5">도시들의 짝 맞추기 게임</font></p>
+				<p><font size="5">도시들의 짝 맞추기 카드 게임</font></p>
 				<br>
 				<p><font size= "4">카드를 클릭하면 시작합니다.</font><p>
 				<br>
@@ -51,8 +49,8 @@
 			var resultsArray = [];
 			var counter = 0;
 			var textext = document.getElementById('textext');
-			var seconds = 00; 
-			var tens = 00; 
+			var seconds = 0; 
+			var tens = 0; 
 			var appendTens = document.getElementById("tens");
 			var appendSeconds = document.getElementById("seconds");
 			var Interval ;
@@ -61,7 +59,7 @@
 			var clone = images.slice(0); // duplicate array
 			var cards = images.concat(clone); // merge to arrays 
 	
-			// Shufffel function
+			// Shufffel function 
 			function shuffle(o){
 			for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i],   o[i] = o[j], o[j] = x);	
 			return o;
