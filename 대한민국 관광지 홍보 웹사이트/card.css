@@ -1,0 +1,162 @@
+* {margin : 0px; padding:0px;}
+
+
+
+/* Variabes */  
+$orange: #ffa600;
+$green: #c1d72e;
+$blue: #82d2e5;
+$grey: #f3f3f3;
+$white: #fff;
+$base-color:$blue ;
+
+
+/* Mixin's */  
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin corners ($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius; 
+  -khtml-border-radius: $radius; 
+}
+
+body {
+  background:rgb(255,255,255);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  height:100%;
+  color: rgb(0,0,0);
+  text-align: center;
+}
+
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+#seconds, #tens{
+  font-size:2em;
+}
+
+button{
+  @include corners (5px);
+  background:rgb(0,0,0);
+  color:$white;
+  border: solid 1px $white;
+  text-decoration:none;
+  cursor:pointer;
+  font-size:1.2em;
+  padding:18px 10px;
+  width:180px;
+  margin: 10px;
+  outline: none;
+ 
+    &:hover {
+        @include transition;
+        background:$white;
+        border: solid 1px $white;
+        color:$base-color;
+    }
+    
+}
+
+
+#container {
+  width: 630px;
+  margin: 10px auto;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+}
+
+[data-view="card"] {
+  transform: rotateY(180deg);
+  width: 100px;
+  height: 140px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+  background:
+  linear-gradient(135deg, rgb(255,178,245) 22px, rgb(255,178,245) 22px, rgb(255,178,245) 24px, transparent 24px, transparent 67px, rgb(255,178,245) 67px, rgb(255,178,245) 69px, transparent 69px),
+  linear-gradient(225deg, rgb(255,178,245) 22px, rgb(255,178,245) 22px, rgb(255,178,245) 24px, transparent 24px, transparent 67px, rgb(255,178,245) 67px, rgb(255,178,245) 69px, transparent 69px)0 64px;
+  background-color: rgb(255,178,245);
+  background-size: 64px 128px
+}
+
+.flipped {
+  transition: 0.6s;
+    transform-style: preserve-3d;
+  position: relative;
+    transform: rotateY(0deg);
+}
+
+.reverse {
+  transition: 0.6s;
+    transform-style: preserve-3d;
+  position: relative;
+    transform: rotateY(180deg);
+}
+
+.correct {
+  opacity: .5;
+  cursor: default;
+    transform-style: preserve-3d;
+  position: relative;
+    transform: rotateY(0deg);
+}
+
+/* Icons */
+$cards: 1su,2dg,3dj,4bs,5us;
+       
+@each $card in $cards  {
+
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("#{$card}.png") left center no-repeat $white;
+    background-size: contain;
+  }
+
+}
+
+.correct[data-item="1su"], .flipped[data-item="1su"] {
+	background: url("1su.png") left center no-repeat #fff;
+	background-size: 100px 170px; 
+}
+
+.correct[data-item="2dg"], .flipped[data-item="2dg"] {
+	background: url("2dg.png") left center no-repeat #fff;
+	background-size: 100px 170px; 
+}
+.correct[data-item="3dj"], .flipped[data-item="3dj"] {
+	background: url("3dj.png") left center no-repeat #fff;
+	background-size: 100px 170px;
+}
+.correct[data-item="4bs"], .flipped[data-item="4bs"] {
+	background: url("4bs.png") left center no-repeat #fff;
+	background-size: 100px 170px;
+}
+.correct[data-item="5us"], .flipped[data-item="5us"] {
+	background: url("5us.png") left center no-repeat #fff;
+	background-size: 100px 170px;
+}
+

@@ -1,0 +1,100 @@
+<!doctype>
+<html lang = "lo">
+	<head>
+	    <meta "charset=utf-8">
+		<link rel="stylesheet" href= "default.css">
+	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+		
+		
+		<title>한국에서 놀자</title>
+	</head>
+	
+	<body>
+		<div id="all">
+			<header style="margin-top:20px;">
+				<div id=logo class=logo><a href="main.html">
+				<img align=center width=200px height=160px src="img/logo.png"></a></div>
+			</header><br>
+		
+		
+		
+		
+			<div id="ssun"></div>
+			<nav>
+			<ol>
+				<img align=left src="img/menu.png">
+				<li><a href ="seoul.html">　서울</a></li>
+				<li><a href ="incheon.html">인천</a></li>
+				<li><a href ="daejeon.html">대전</a></li>
+				<li><a href ="gwangju.html">광주</a></li>
+				<li><a href ="daegu.html">대구</a></li>
+				<li><a href ="ulsan.html">울산</a></li>
+				<li><a href ="busan.html">부산</a></li>				
+				<li><a href ="jeju.html">제주도</a></li>
+				<li><img src="img/new.png"><a href ="list.html">후기게시판</a></li>
+				<li><img src="img/game.png" width="28px"><a href ="game.html">GAME</a></li>
+			</ol>
+			</nav>
+			<div id="ssun"></div>
+			<br>
+
+
+   <section class="content-header">
+      <h1>
+			<i class="fa fa-list-ol"></i>
+			<img src="img/bar.png">
+			후기 게시판
+      </h1>
+	  <br/><br/>
+   </section>
+   <input id="cardNum" type="hidden" name="num" />
+      <table class="table" style="width:65%; margin:auto">
+         <tr>
+            <td>제목</td>
+            <td>
+               <input id="cardSubject" type="hidden" class="form-control" style="width: 358px;" name="subject">
+               제주도 갔다왔어욤~~~
+            </td>
+         </tr>
+         <tr>
+            <td>글쓴이</td>
+            <td>
+               <div id=card-user>박다정</div>
+            </td>
+         </tr>
+         <tr id="card-start"></tr>
+         <tr>
+            <td>내용</td>
+            <td>
+               <textarea id="cardContent" readonly="readonly" class="form-control" rows="13" cols="40">게시글 제주도를 참고해서 여행갔다왔어요 ㅎㅎㅎ 좋은 정보 감사합니다!♡</textarea>
+			   <img src="img/jejuhoogi.png" width="390px" height="300px">
+			   <img src="img/jejuhoogi2.png" width="390px" height="300px">
+            </td>
+         </tr>
+      </table>
+   <!-- href 쪽에 게시판.html 링크 연결 해주면 됨!! -->
+   
+   <br/><br/>
+    <button class="btn btn-default" type="button" onclick="location.href='list.html'" style="margin-left: 50%;">목록으로</button>
+
+	<footer style="margin-top:100px;">
+				<div style="width:1024; margin:auto; color:#666666;">
+					<div class=qna>Q&A　　　<a href=intro.html>홈페이지소개</a></div>
+					<div class=sns>
+						<div img align=left style="margin:10px"><img width=40px src=img/fa.png>　<img width=40px src=img/in.png>　<img width=40px src=img/na.png>　<img width=40px src=img/ka.png></div>
+						<div img align=left ><img src=img/e.png>　sck01053@gmail.com</div>
+						<div img align=left ><img src=img/ph.png>　010. 9406. 8376</div>
+						<div style="text-align:left">Copyrightⓒ16Team co kr. All Right Resreved</div>
+					</div>
+					<a href="#" class="logo"><img align=right src=img/top.png></a>
+
+					<div class=logo1><a href="#" class="logo"><img height=150px src=img/logo.png></a></div>
+				</div>	
+			</footer>
+		</div>	
+	</body>	
+</html>

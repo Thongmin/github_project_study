@@ -1,0 +1,166 @@
+<!doctype>
+<html lang = "lo">		<!--중요!!!!!!!!!!!!!-->
+	<head>
+		<meta "charset=utf-8">
+		<link rel="stylesheet" href="card.css">
+		<link rel="stylesheet" href= "default.css">
+		
+		<title>한국에서 놀자</title>
+		
+	</head>
+	
+	<body>
+		<div id="all">
+			<header style="margin-top:20px;">
+				<div id=logo class=logo><a href="main.html">
+				<img align=center width=200px height=160px src="img/logo.png"></a></div>
+			</header><br>
+		</div>
+			<div id="ssun"></div>
+			<nav>
+			<ol>
+				<img align=left src="img/menu.png">
+				<li><a href ="seoul.html">   서울</a></li>
+				<li><a href ="incheon.html">인천</a></li>
+				<li><a href ="daejeon.html">대전</a></li>
+				<li><a href ="gwangju.html">광주</a></li>
+				<li><a href ="daegu.html">대구</a></li>
+				<li><a href ="ulsan.html">울산</a></li>
+				<li><a href ="busan.html">부산</a></li>
+				<li><a href ="jeju.html">제주도</a></li>
+				<li><img src="img/new.png"><a href ="list.html">후기게시판</a></li>
+				<li><img src="img/game.png" width="28px"><a href ="game.html">GAME</a></li>
+			</ol>
+			</nav>
+			<div id="ssun"></div>
+			<br>
+				<div class="wrapper">
+				<p><font size= "7">16Team Card Game</font><p>
+				<br>
+				<p><font size="5">도시들의 짝 맞추기 게임</font></p>
+				<br>
+				<p><font size= "4">카드를 클릭하면 시작합니다.</font><p>
+				<br>
+				<p><span id="seconds">00</span>:<span id="tens">00</span></p>
+				<p id ="textext"></p>
+				<div id="container">
+
+			</div>
+			<script>
+			var myCards = document.getElementById('container');
+			var resultsArray = [];
+			var counter = 0;
+			var textext = document.getElementById('textext');
+			var seconds = 00; 
+			var tens = 00; 
+			var appendTens = document.getElementById("tens");
+			var appendSeconds = document.getElementById("seconds");
+			var Interval ;
+			var images = ['1su','2dg','3dj','4bs','5us'];
+	
+			var clone = images.slice(0); // duplicate array
+			var cards = images.concat(clone); // merge to arrays 
+	
+			// Shufffel function
+			function shuffle(o){
+			for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i],   o[i] = o[j], o[j] = x);	
+			return o;
+			}
+			shuffle(cards);
+	
+			for (var i = 0; i < cards.length; i++) {
+			card = document.createElement('div')
+			card.dataset.item = cards[i];
+			card.dataset.view = "card";
+			myCards.appendChild(card);
+		
+			card.onclick = function () {
+				if (this.className != 'flipped' && this.className != 'correct'){
+					this.className = 'flipped';
+					var result = this.dataset.item;
+					resultsArray.push(result);
+					clearInterval(Interval);
+					Interval = setInterval(startTimer, 10);
+				}	
+	
+				if (resultsArray.length > 1) {
+		
+					if (resultsArray[0] === resultsArray[1]) {
+						check("correct");
+						counter ++;
+						win();
+						resultsArray = [];
+					}else {
+						check("reverse");
+						resultsArray = [];
+					}
+				}
+			}
+   
+			};
+
+
+			var check = function(className) {
+  
+				var x = document.getElementsByClassName("flipped");
+				setTimeout(function() {
+					for(var i = (x.length - 1); i >= 0; i--) {
+					x[i].className = className;
+					}
+				},500);
+   
+			}
+
+			var win = function () {
+
+				if(counter === 5) {
+					clearInterval(Interval);
+					textextext.innerHTML = "Your time was " + seconds + ":" + tens;
+				} 
+  
+			}
+     
+			function startTimer () {
+				tens++; 
+    
+				if(tens < 9){
+					appendTens.innerHTML = "0" + tens;
+				}
+    
+				if (tens > 9){
+					appendTens.innerHTML = tens;
+      
+				} 
+    
+				if (tens > 99) {
+				seconds++;
+				appendSeconds.innerHTML = "0" + seconds;
+				tens = 0;
+				appendTens.innerHTML = "0" + 0;
+				}
+    
+				if (seconds > 9){
+				appendSeconds.innerHTML = seconds;
+				}
+  
+			}
+
+			</script>
+			
+			<footer style="margin-top:400px;">
+				<div style="width:1024; margin:auto; color:#666666;">
+					<div class=qna>Q&A　　　<a href=intro.html>홈페이지소개</a></div>
+					<div class=sns>
+						<div img align=left style="margin:10px"><img width=40px src=img/fa.png>　<img width=40px src=img/in.png>　<img width=40px src=img/na.png>　<img width=40px src=img/ka.png></div>
+						<div img align=left ><img src=img/e.png>　sck01053@gmail.com</div>
+						<div img align=left ><img src=img/ph.png>　010. 9406. 8376</div>
+						<div style="text-align:left">Copyrightⓒ16Team.co.kr / All Right Resreved</div>
+					</div>
+					<a href="#" class="logo"><img align=right src=img/top.png></a>
+
+					<div class=logo1><a href="main.html" class="logo"><img height=150px src=img/logo.png></a></div>
+				</div>	
+			</footer>
+		</div>	
+	</body>
+</html>

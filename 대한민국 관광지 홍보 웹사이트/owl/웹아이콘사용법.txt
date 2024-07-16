@@ -1,0 +1,12 @@
+
+웹 아이콘 사용법.
+
+1.html 상단에 폰트어썸 CSS 호출
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+2. 사용할 부분에 넣는 법
+<i class=”fa fa-arrows-v“></i>
+<span style=”font-family: FontAwesome;font-size: 40px;”>&#xf015;</span>
+
+3. 아이콘 링크
+http://fontawesome.io/icons/

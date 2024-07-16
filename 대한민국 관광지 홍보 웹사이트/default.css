@@ -1,0 +1,59 @@
+* {margin : 0px; padding:0px;}
+.red{color : #ff0000;}
+.f14{font-size : 14px;}
+.f16{font-size : 16px;}
+.f18{font-size : 18px;}
+.f20{font-size : 20px !important;}
+.bold{font-weight: bold;}
+
+/*h1,h2,h3,h4,h5{font-weight:bold;}    같은 속성 넣고 싶을 때*/
+body{margin:0; text-align:center;}
+#all{width : auto; margin: auto; padding:auto;}
+#busan{margin:20px 0px 20px 0px;  width:1024; margin: auto;}
+#img{border-width:2px;border-style:solid;border-color:#003399; margin:0px 20px 0px 0px; padding:4px; width:54%; float:left;}
+#sen{float:left; width:38%; height:350px; margin:10px; text-align:left; }
+#sen1{float:left; width:38%; margin:10px 30px 10px 10px; text-align:right; }
+#text{font-family:궁서체; font-size:1.1em;}
+#text1{font-family:돋움체; font-size:0.8em; line-height:30px;}
+#text2{font-size:0.7em; line-height:25px; color:blue;}
+#back	{background-image:url(img/logo1.png);	background-repeat:no-repeat;	background-position:50% 50%;		}
+		
+header		{background-color:#fff; font-weight : bold; font-size: 50px; margin:20px; height:150px; line-height:35px; width:1024; margin: auto;}
+nav			{ height: 27px; line-height:24px; margin:10px 0px 5px; text-align:center; background-color:#fff; word-spacing:25px; font-size:1.1em; width:1024; margin: auto;}
+	nav ol{margin:0px;}
+	nav ol li{display : inline; }
+	nav a{display : inline;   font-weight:bold; text-decoration : none; color:#050099;}
+	nav a:hover{font-weight:bold; color:lightblue; }
+section		{ width:1024; margin: auto;}
+
+footer 		{background-color:#DBE8F3; height: 230px; line-height:50px; clear:both; margin-top:40px;}
+	
+	.con_none{float : left; width : 6%;}
+	.main_img{clear : both; 
+			  background:#fff; height : auto;
+			   width:1024; margin: auto;}
+	#1 {float:left;}
+	.main{width:1024px;}
+	.notice{float:left; width:47%; text-align:left;}
+		.notice .title{float:left; text-align:left; line-height:35px;}
+		.notice .date{float:right; text-align:right; line-height:35px;}
+		.notice .notice1{font-size:1.3em; color:#050099; font-weight:bold;}
+	.sns{float:left; width:75%; line-height:30px;}
+	.logo{float:center; width:auto; height:auto;}
+	.logo1{float:right; height:100%;}
+	.qna{text-align:left;}
+	.login{font-size:14px; text-align:right;}
+	.fav{font-size:14px; text-align:left; color:#aaaaaa; line-height:0px;} 
+	.search{padding-left:65px;}
+	.hot{text-align:left; margin:0px; padding:0px; font-size:1.3em; color:#050099; font-weight:bold;}
+	#ssun{height:1px; background-color:#BDBDBD; width:100%; margin:10px 0px 10px 0px;}
+	#ssun2{height:50px; background-color:#EDF8FA; width:100%; margin:0px;}
+	#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+p  { line-height:15px }
+h3 { line-height:10px }
+a { text-decoration:none }
